@@ -1,0 +1,100 @@
+.button {
+    position: relative;
+    cursor: pointer;
+}
+.default {
+    color: white;
+    background: var(--orange-100);
+    border-radius: 12px;
+    padding: 21px 110px;
+    font-weight: 600;
+}
+
+.money {
+    cursor: default;
+}
+
+.gaming span,
+.money span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hr {
+    position: absolute;
+    width: 100%;
+    height: 1.3px;
+    color: transparent;
+    border: none;
+    background: var(--black-40);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.figure path {
+    transition: 0.5s;
+}
+
+/* hover */
+
+.button:hover hr {
+    background: var(--orange-100);
+}
+.button:hover .figure path {
+    stroke: var(--orange-100);
+    fill: white;
+}
+
+.default:hover {
+    background: var(--orange-80);
+}
+.default:focus {
+    background: var(--orange-120);
+}
+
+/* selected mode */
+
+.selected hr {
+    background: var(--orange-100);
+}
+.selected .figure path {
+    stroke: var(--orange-100);
+    fill: var(--orange-5);
+}
+.money.selected span {
+    color: var(--orange-100);
+}
+.money.selected .figure path {
+    fill: white;
+}
+
+/* correct mode */
+
+.correct hr {
+    background: var(--green-100);
+}
+.correct .figure path {
+    stroke: var(--green-100);
+    fill: var(--green-5);
+}
+
+/* wrong mode */
+
+.wrong hr {
+    background: var(--red-100);
+}
+.wrong .figure path {
+    stroke: var(--red-100);
+    fill: var(--red-5);
+}
+
+@media screen and (max-width: 700px) {
+    .default {
+        padding: 16px 110px;
+    }
+}

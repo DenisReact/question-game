@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+:root {
+    --black-100: #1c1c21;
+    --black-40: #d0d0d8;
+    --black-5: #f5f5f7;
+    --orange-120: #e87928;
+    --orange-100: #ff8b37;
+    --orange-80: #ffac70;
+    --orange-5: #fff3eb;
+    --green-100: #47d867;
+    --green-5: #e6faea;
+    --red-100: #ec6259;
+    --red-5: #fdeeed;
+    --title1: 74.67px;
+    --title2: 42.67px;
+    --body: 26.67px;
+    --title1-mobile: 32px;
+    --title2-mobile: 18px;
+    --body-mobile: 14px;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -7,9 +27,48 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    color: var(--black-100);
+}
+h1 {
+    font-size: var(--title1);
+}
+h3 {
+    font-size: var(--title2);
+}
+button,
+a {
+    font-size: var(--body);
+    transition: 0.5s;
+}
+button {
+    background: none;
+    border: none;
+}
+p {
+    font-size: var(--body);
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+.disabled {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: var(--title1-mobile);
+    }
+    h3 {
+        font-size: var(--title2-mobile);
+    }
+    button,
+    a {
+        font-size: var(--body-mobile);
+    }
+    p {
+        font-size: var(--body-mobile);
+    }
 }

@@ -1,7 +1,11 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import StartScreen from './pages/StartScreen';
 
-function App() {
-    return <div>dsa</div>;
-}
+const App = () => (
+    <Routes>
+        <Route path="/" element={<StartScreen />} />
+    </Routes>
+);
 
 export default App;
