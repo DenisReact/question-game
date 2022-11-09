@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, MouseEventHandler } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { ButtonProps, WrapperButtonProps } from './Button.types';
 import styles from './Button.module.css';
