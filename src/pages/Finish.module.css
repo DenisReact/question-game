@@ -1,0 +1,13 @@
+.finishScreen::before {
+    display: none;
+}
+.finishScreen h3 {
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+.finishScreen h1 {
+    text-shadow: none;
+}
+.tryAgain {
+    width: 395px;
+}
