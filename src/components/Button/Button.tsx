@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEvent, MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import { ButtonProps, WrapperButtonProps } from './Button.types';
 import styles from './Button.module.css';
@@ -27,10 +27,16 @@ const Button: FC<ButtonProps> = ({
     title,
     onAnswer,
     index,
+    onClick,
 }) => {
-    const handleClick = () => {
+    const handleClick = (
+        e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
+    ) => {
         if (onAnswer && index !== undefined) {
             onAnswer(index);
+        }
+        if (onClick) {
+            onClick(e);
         }
     };
     return (
@@ -41,7 +47,7 @@ const Button: FC<ButtonProps> = ({
                 disabled={mode === 'disabled'}
                 style={style}
                 type="button"
-                onClick={handleClick}
+                onClick={e => handleClick(e)}
             >
                 <span>{children}</span>
                 <FigureButton variant={variant} />

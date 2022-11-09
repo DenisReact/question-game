@@ -18,4 +18,5 @@ export interface ButtonProps extends WrapperButtonProps, FigureButtonProps {
     title?: string;
     onAnswer?: (index: number) => void;
     index?: number;
+    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }

@@ -9,14 +9,10 @@ import handSvg from '../imgs/Hand.svg';
 const Finish = () => {
     const dispatch = useAppDispatch();
     const currentBudget = useAppSelector(state => state.game.currentBudget);
-    // console.log()
-    // React.useEffect(() => {
-    //     console.log('hi');
-    //     return () => {
-    //         dispatch(setBudget('0'));
-    //         dispatch(setLevelCount(0));
-    //     };
-    // }, []);
+    const handleClick = () => {
+        dispatch(setBudget('0'));
+        dispatch(setLevelCount(0));
+    };
     return (
         <main className={`${styles.startScreen} ${classes.finishScreen}`}>
             <div className={styles.centerContent}>
@@ -24,7 +20,11 @@ const Finish = () => {
                 <div className={styles.text}>
                     <h3>Total score:</h3>
                     <h1>{currentBudget} earned</h1>
-                    <Button className={classes.tryAgain} href="/game">
+                    <Button
+                        onClick={() => handleClick()}
+                        className={classes.tryAgain}
+                        href="/game"
+                    >
                         Try again
                     </Button>
                 </div>
