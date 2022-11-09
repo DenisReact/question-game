@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './StartScreen.module.css';
+import styles from './Start.module.css';
 import handSvg from '../imgs/Hand.svg';
 import Button from '../components/Button/Button';
 
