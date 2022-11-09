@@ -16,4 +16,6 @@ export interface ButtonProps extends WrapperButtonProps, FigureButtonProps {
     style?: React.CSSProperties;
     className?: string;
     title?: string;
+    onAnswer?: (index: number) => void;
+    index?: number;
 }

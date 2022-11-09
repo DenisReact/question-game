@@ -2,6 +2,7 @@
     position: relative;
     cursor: pointer;
     z-index: 1;
+    outline: none;
 }
 .default {
     color: white;
@@ -32,13 +33,14 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transform: translate(-50%, -50%);
 }
 .gaming span {
-    width: 350px;
+    width: 400px;
+    text-align: left;
 }
 .money span {
     width: 250px;

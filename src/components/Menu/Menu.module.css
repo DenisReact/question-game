@@ -1,7 +1,6 @@
 .menu {
     position: relative;
-    max-width: 500px;
-    width: 100vw;
+    width: 500px;
     background: white;
     height: 100vh;
     overflow-y: auto;
@@ -9,6 +8,7 @@
     padding-top: 10px;
     display: flex;
     transition: 1s;
+    z-index: 1;
 }
 .list {
     position: relative;
@@ -55,17 +55,18 @@
     transform: translate(0, -6px) rotate(45deg);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
     .menuButton {
         display: inline-block;
     }
     .menu {
         position: absolute;
-        transform: translateX(200%);
+        transform: translateX(200vw);
         left: -100vw;
         right: auto;
+        width: 100vw;
     }
     .menu.active {
-        transform: translateX(100%);
+        transform: translateX(100vw);
     }
 }

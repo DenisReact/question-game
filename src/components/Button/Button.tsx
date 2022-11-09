@@ -25,19 +25,29 @@ const Button: FC<ButtonProps> = ({
     href,
     mode = 'inactive',
     title,
-}) => (
-    <WrapperButton mode={mode} href={href}>
-        <button
-            title={title}
-            className={`${styles.button} ${styles[variant]} ${styles[mode]} ${className}`}
-            disabled={mode === 'disabled'}
-            style={style}
-            type="button"
-        >
-            <span>{children}</span>
-            <FigureButton variant={variant} />
-        </button>
-    </WrapperButton>
-);
+    onAnswer,
+    index,
+}) => {
+    const handleClick = () => {
+        if (onAnswer && index !== undefined) {
+            onAnswer(index);
+        }
+    };
+    return (
+        <WrapperButton mode={mode} href={href}>
+            <button
+                title={title}
+                className={`${styles.button} ${styles[variant]} ${styles[mode]} ${className}`}
+                disabled={mode === 'disabled'}
+                style={style}
+                type="button"
+                onClick={handleClick}
+            >
+                <span>{children}</span>
+                <FigureButton variant={variant} />
+            </button>
+        </WrapperButton>
+    );
+};
 
 export default Button;
