@@ -24,9 +24,11 @@ const Button: FC<ButtonProps> = ({
     variant = 'default',
     href,
     mode = 'inactive',
+    title,
 }) => (
     <WrapperButton mode={mode} href={href}>
         <button
+            title={title}
             className={`${styles.button} ${styles[variant]} ${styles[mode]} ${className}`}
             disabled={mode === 'disabled'}
             style={style}
@@ -34,7 +36,6 @@ const Button: FC<ButtonProps> = ({
         >
             <span>{children}</span>
             <FigureButton variant={variant} />
-            {(variant === 'money' || variant === 'gaming') && <hr />}
         </button>
     </WrapperButton>
 );

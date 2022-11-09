@@ -1,9 +1,11 @@
 import { ReactNode } from 'react';
 
+export type Modes = 'inactive' | 'selected' | 'correct' | 'wrong' | 'disabled';
+
 export interface WrapperButtonProps {
     children: ReactNode;
     href?: string;
-    mode?: 'inactive' | 'selected' | 'correct' | 'wrong' | 'disabled';
+    mode?: Modes;
 }
 
 export interface FigureButtonProps {
@@ -13,4 +15,5 @@ export interface FigureButtonProps {
 export interface ButtonProps extends WrapperButtonProps, FigureButtonProps {
     style?: React.CSSProperties;
     className?: string;
+    title?: string;
 }

@@ -1,0 +1,71 @@
+.menu {
+    position: relative;
+    max-width: 500px;
+    width: 100vw;
+    background: white;
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    display: flex;
+    transition: 1s;
+}
+.list {
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.stageButton {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.menu .stageButton:first {
+    margin-top: 10px;
+}
+
+.menuButton {
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    margin: 21px;
+    z-index: 10;
+    display: none;
+    position: fixed;
+}
+.menuButton > div {
+    width: 16px;
+    height: 2px;
+    background-color: var(--black-100);
+    transition: 0.5s;
+    border-radius: 100px;
+}
+.bar2 {
+    margin: 4px 0;
+}
+
+.menuButton.active .bar1 {
+    transform: translate(0, 6px) rotate(-45deg);
+}
+.menuButton.active .bar2 {
+    opacity: 0;
+}
+.menuButton.active .bar3 {
+    transform: translate(0, -6px) rotate(45deg);
+}
+
+@media screen and (max-width: 1000px) {
+    .menuButton {
+        display: inline-block;
+    }
+    .menu {
+        position: absolute;
+        transform: translateX(200%);
+        left: -100vw;
+        right: auto;
+    }
+    .menu.active {
+        transform: translateX(100%);
+    }
+}

@@ -1,6 +1,7 @@
 .button {
     position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 .default {
     color: white;
@@ -12,6 +13,18 @@
 
 .money {
     cursor: default;
+    height: 54px;
+}
+.gaming {
+    height: 97px;
+}
+.money .figure {
+    width: 320px;
+    height: 57px;
+}
+.gaming .figure {
+    width: 520px;
+    height: 97px;
 }
 
 .gaming span,
@@ -20,6 +33,15 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gaming span {
+    width: 350px;
+}
+.money span {
+    width: 250px;
 }
 
 hr {
@@ -42,10 +64,10 @@ hr {
 
 /* hover */
 
-.button:hover hr {
+.gaming:hover hr {
     background: var(--orange-100);
 }
-.button:hover .figure path {
+.gaming:hover .figure path {
     stroke: var(--orange-100);
     fill: white;
 }
@@ -96,5 +118,25 @@ hr {
 @media screen and (max-width: 700px) {
     .default {
         padding: 16px 110px;
+    }
+    .money .figure {
+        width: 240px;
+        height: 32px;
+    }
+    .gaming .figure {
+        width: 288px;
+        height: 56px;
+    }
+    .money {
+        height: 32px;
+    }
+    .gaming {
+        height: 56px;
+    }
+    .money span {
+        width: 120px;
+    }
+    .gaming span {
+        width: 240px;
     }
 }
