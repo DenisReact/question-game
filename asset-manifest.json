@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/question-game/static/css/main.f43ebe30.css",
+    "main.js": "/question-game/static/js/main.6e87bc4e.js",
+    "static/media/Hand.svg": "/question-game/static/media/Hand.ae778be2545d339186d7f27827d5ba72.svg",
+    "index.html": "/question-game/index.html",
+    "main.f43ebe30.css.map": "/question-game/static/css/main.f43ebe30.css.map",
+    "main.6e87bc4e.js.map": "/question-game/static/js/main.6e87bc4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f43ebe30.css",
+    "static/js/main.6e87bc4e.js"
+  ]
+}
