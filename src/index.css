@@ -41,6 +41,10 @@ a {
     font-size: var(--body);
     transition: 0.5s;
 }
+a {
+    text-decoration: none;
+    color: var(--black-100);
+}
 button {
     background: none;
     border: none;

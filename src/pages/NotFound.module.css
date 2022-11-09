@@ -1,0 +1,21 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    margin: 20px;
+}
+.title a {
+    color: var(--orange-100);
+    font-size: var(--title1);
+}
+
+@media screen and (max-width: 700px) {
+    .title a {
+        font-size: var(--title1-mobile);
+    }
+}
