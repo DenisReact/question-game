@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <Router basename="/question-game" >
+    <Router basename="/question-game">
         <Provider store={setupStore()}>
             <React.StrictMode>
                 <App />
